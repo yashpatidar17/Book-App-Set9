@@ -1,24 +1,52 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+} */
+
+/* .App {
+  text-align: center;
+} */
+
+.navbar {
+  text-align: center;
+  font-size:20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+section {
+  margin: 0 ;
+  border-top: 1px solid ;
+
 }
 
-@keyframes logo-spin {
+.card {
+  display: inline-block;
+  box-Shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 350px;
+  height: 400px;
+}
+
+button {
+  display: block;
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 200;
+}
+
+img{
+  width : 100%;
+  height : 200px;
+ 
+  
+}
+
+
+/* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -31,12 +59,12 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
-.card {
+/* .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
-}
+} */
