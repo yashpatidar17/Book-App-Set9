@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 export const BookContext = createContext();
 export const BookContextProvider = ({ children }) => {
   const [bookdata, setBookdata] = useState([]);
+  const [profileData,setProfileData] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -12,6 +13,7 @@ export const BookContextProvider = ({ children }) => {
       try {
         const { data } = await fakeFetch("https://example.com/api/books");
         setBookdata(data.books);
+        setProfileData(data.user);
       } catch (e) {
         console.error(e);
       }
@@ -47,9 +49,11 @@ export const BookContextProvider = ({ children }) => {
       );
     }
   };
+
+  const totalFav = bookdata.reduce((acc,curr)=> curr?.fav ? acc+1:acc,0)
   return (
     <div>
-      <BookContext.Provider value={{ bookdata, readHandler, favHandler }}>
+      <BookContext.Provider value={{ bookdata, readHandler, favHandler,totalFav,profileData }}>
         {children}
       </BookContext.Provider>
     </div>
